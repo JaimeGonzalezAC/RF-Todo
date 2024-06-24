@@ -1,0 +1,4 @@
+Abrir proyecto en visual studio code
+En la raíz Todo/todoapi correr el comando dotnet run y ya que cargue entrar a la página http://localhost:5193/swagger
+para mostrar el api con el swagger
+Para acceder al cliente es corriendo desde todoclient y ennla url http://localhost:5150/

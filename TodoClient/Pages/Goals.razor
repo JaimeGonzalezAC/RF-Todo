@@ -1,0 +1,26 @@
+@page "/goals"
+@inject TodoClient.Services.ApiService ApiService
+@using TodoClient.Models
+
+<h3>Goals</h3>
+
+<button @onclick="FetchGoals">Fetch Goals</button>
+
+@if (goals != null)
+{
+    <ul>
+        @foreach (var goal in goals)
+        {
+            <li>@goal.Name - @goal.Description</li>
+        }
+    </ul>
+}
+
+@code {
+    private List<Goal> goals;
+
+    private async System.Threading.Tasks.Task FetchGoals()
+    {
+        goals = await ApiService.GetGoals();
+    }
+}
