@@ -1,3 +1,0 @@
-﻿<Project>
-  <Import Project="..\build\TodoClient.Client.props" />
-</Project>
